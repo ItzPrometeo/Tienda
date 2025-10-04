@@ -1,0 +1,261 @@
+/* Estructura general */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+/* Ajusta el main para evitar que quede debajo del header */
+.main-momentos {
+  padding-top: 80px;
+}
+
+/* Título */
+.Titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Carrusel general */
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Botones flechas */
+.flechas {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+.flechas:hover {
+  transform: scale(1.15);
+}
+
+/* Galería wrapper (recorta el scroll horizontal) */
+.galeria-wrapper {
+  overflow: hidden;
+  width: 90%;
+  max-width: 1100px;
+}
+
+/* Galería interna que se mueve con JS */
+.galeria {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+/* Cada imagen del carrusel */
+.img-container {
+  flex: 0 0 calc(33.333% - 16px);
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.img-container:hover {
+  transform: scale(1.03);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.img:hover {
+  transform: scale(1.08);
+}
+
+/* Puntos indicadores */
+.puntos {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.puntos p {
+  display: inline-block;
+  margin: 0 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.puntos .bold {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .img-container {
+    flex: 0 0 100%;
+    height: 200px;
+  }
+
+  .galeria {
+    gap: 16px;
+  }
+}
+
+/* Eventos */
+.eventos-section {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.evltra {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #b75f3f;
+}
+
+.evntdescrip {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.eventos {
+  background-color: #fff8f1;
+  padding: 1rem;
+  border-radius: 16px;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.eventos:hover {
+  transform: translateY(-5px);
+}
+
+.imgE {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+.imgEvento {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nombreEvento {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #b75f3f;
+}
+
+.descripcionEvento, .horarioEvento {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Formulario */
+.formulario {
+  background-color: #fefefe;
+  margin-top: 4rem;
+  padding: 2rem;
+  border-top: 2px solid #b75f3f;
+}
+
+.englobe {
+  max-width: 600px;
+  margin: auto;
+}
+
+.txt_formulario h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #b75f3f;
+}
+
+.txt_formulario p {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.textLabel {
+  font-weight: bold;
+  color: #333;
+}
+
+.caja, .asunto {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.asunto {
+  resize: vertical;
+  height: 100px;
+}
+
+.boton_formulario {
+  background-color: #b75f3f;
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton_formulario:hover {
+  background-color: #934b30;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .galeria-wrapper {
+    width: 95%;
+  }
+
+  .img-container {
+    width: 250px;
+    height: 160px;
+  }
+
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+}

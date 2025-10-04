@@ -1,0 +1,31 @@
+.footer {
+    background-color: #F5E6D8;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+    padding: 2rem;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0 -2px 10px #2a1e13;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    color: #000;
+    flex-direction: column;
+    gap: 3rem;
+}
+.container-footer img {
+    width: 50px;
+    height: 40px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.container-footer img:hover{
+    background-color: aquamarine;
+}
+
+.container-footer{
+    display: flex;
+    gap: 1rem;
+}
